@@ -1,0 +1,22 @@
+
+<div class="actus">
+  <?php foreach($fiches as $fiche): ?>
+
+  <?php 
+   //echo $info_res; 
+   setlocale(LC_TIME, "fr_FR.UTF-8");
+   $date = new DateTime($fiche['date_creation']);
+   $date = strftime('%A %d %B %G à %H:%I', $date->getTimestamp());
+
+   $contenu = $GLOBALS['wiki']->Format($fiche['bf_contenu']);
+  ?>
+
+    <div class="actu">
+        <h2><?php echo $fiche['bf_titre']; ?></h2>
+        <p class="actu_info">Le <?php echo $date; ?></p>
+        <p class="actu_contenu"><?php echo $contenu; ?></p>
+        <p class="actu_auteur"><?php echo $fiche['createur']; ?></p>
+    </div>
+<?php endforeach; ?>
+</div>
+<?php echo $pager_links; ?>

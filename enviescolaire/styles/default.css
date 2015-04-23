@@ -1,0 +1,127 @@
+
+body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-width: 1280px;
+	margin: auto;
+	/*max-width: 34em;*/
+}
+
+/*#main {
+	max-width: 34em;
+}*/
+
+header, footer {
+	border: 1px solid black;
+}
+
+/*****************************************************************************
+ * barre de navigation
+ ****************************************************************************/
+
+nav ul {
+	display: inline-flex;
+	flex-direction: row;
+	
+}
+
+nav li {
+	list-style: none;
+	margin: 5px 10px;
+}
+
+/*****************************************************************************
+ * Ressources
+ ****************************************************************************/
+
+.ressources {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.ressource {
+	background: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px #999;
+	display: flex;
+	flex-direction: column;
+	/*flex-wrap: wrap;*/
+	height: 280px;
+	justify-content: center;
+	list-style-type: none;
+	margin: 20px;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	width: 180px;
+}
+
+.ressource:hover {
+	animation: FirstAnimation 0.5s;
+	transform: scale(1.1);
+}
+
+.ressource img {
+	height: 180px;
+	margin-bottom: 30px;
+}
+
+/*****************************************************************************
+ * Articles
+ ****************************************************************************/
+.actus {
+	max-width: 33em;
+	padding : 20px;
+	margin: auto;
+}
+
+.actus * {
+	max-width: 32em;
+}
+
+/*div.page .info_box {
+	display: none;
+}*/
+
+.actu {
+	margin-bottom: 50px;
+}
+
+.actu h2 {
+	border-bottom: solid 1px blue;
+	/*white-space:nowrap;*/
+}
+
+p.actu_auteur, p.actu_info {
+	width: 100%;
+	text-align: right;
+}
+
+p.actu_info {
+	color: grey;
+	font-style: italic;
+}
+
+
+
+
+
+
+
+
+@keyframes FirstAnimation {
+	from {
+		transform: scale(1.0);
+	}
+	to {
+		transform: scale(1.1);
+	}
+}
+
+
+
+
+/*.titre_consulter {display: none;}*/

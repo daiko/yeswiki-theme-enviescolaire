@@ -1,0 +1,26 @@
+<div class="ressources">
+<?php foreach($fiches as $fiche): ?>
+
+<?php 
+// Redimmension l'image et la met en cache si necessaire
+if (!file_exists('cache/image_180_'.$fiche['imagebf_image'])) 
+	$image = redimensionner_image(
+		'files/'.$fiche['imagebf_image'], 
+		'cache/image_180_'.$fiche['imagebf_image'], 180, 180); 
+else 
+	$image = 'cache/image_180_'.$fiche['imagebf_image'];
+
+$titre = htmlspecialchars($fiche['bf_titre'], 
+													ENT_COMPAT, 
+													TEMPLATES_DEFAULT_CHARSET);
+
+$file = "files/".$fiche['fichierbf_file'];
+
+?>
+
+<a class="ressource" href="<?php echo $file; ?>">
+	<img src="<?php echo $image; ?>" />
+	<p class="name"><?php echo $titre; ?></p>
+</a>
+<?php endforeach; ?>
+<div>
