@@ -1,34 +1,53 @@
+aside { order: 1;}
+section { order: 2;}
+footer { order: 4;}
 
 body {
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	max-width: 1280px;
-	margin: auto;
-	/*max-width: 34em;*/
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	margin: 0;
+	padding: 0;*/
 }
 
-/*#main {
-	max-width: 34em;
-}*/
+section {
+	padding-left: 10px;
+	align-self: stretch;
+}
 
-header, footer {
-	border: 1px solid black;
+aside {
+	background: #3c7e75;
+	color: white;
+	padding: 20px 0;
+	margin: 0;
+	max-width: 20em;
+}
+
+aside a {
+	
+}
+
+footer {
+	text-align: center;
 }
 
 /*****************************************************************************
  * barre de navigation
  ****************************************************************************/
 
-nav ul {
+aside ul {
 	display: inline-flex;
-	flex-direction: row;
+	flex-direction: column;
 	
 }
 
-nav li {
+aside li {
 	list-style: none;
-	margin: 5px 10px;
+	margin: 5px 0px;
+}
+
+aside a {
+	color: white;
 }
 
 /*****************************************************************************
@@ -37,8 +56,7 @@ nav li {
 
 .ressources {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 	justify-content: center;
 }
 
@@ -48,7 +66,6 @@ nav li {
 	box-shadow: 5px 5px 10px #999;
 	display: flex;
 	flex-direction: column;
-	/*flex-wrap: wrap;*/
 	height: 280px;
 	justify-content: center;
 	list-style-type: none;
@@ -65,7 +82,7 @@ nav li {
 }
 
 .ressource img {
-	height: 180px;
+	max-height: 180px;
 	margin-bottom: 30px;
 }
 
@@ -75,16 +92,12 @@ nav li {
 .actus {
 	max-width: 33em;
 	padding : 20px;
-	margin: auto;
+	margin: 0;
 }
 
 .actus * {
 	max-width: 32em;
 }
-
-/*div.page .info_box {
-	display: none;
-}*/
 
 .actu {
 	margin-bottom: 50px;
@@ -92,7 +105,6 @@ nav li {
 
 .actu h2 {
 	border-bottom: solid 1px blue;
-	/*white-space:nowrap;*/
 }
 
 p.actu_auteur, p.actu_info {
@@ -106,12 +118,6 @@ p.actu_info {
 }
 
 
-
-
-
-
-
-
 @keyframes FirstAnimation {
 	from {
 		transform: scale(1.0);
@@ -121,7 +127,14 @@ p.actu_info {
 	}
 }
 
+@media (max-width: 40em) {
 
+	body {
+		flex-flow: row wrap;
+	}
 
+	aside {
+		max-width: inherit;
+	}
 
-/*.titre_consulter {display: none;}*/
+}

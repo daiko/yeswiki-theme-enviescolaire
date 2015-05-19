@@ -9,21 +9,28 @@
 </head>
 
 <body {{parambody}}>
-	<header>
-		<a href="wakka.php"><h1>Enviescolaire</h1></a>
-	</header>
-		<nav>
+	<section id="main" role="main" {{doubleclic}}>
+		{WIKINI_PAGE}
+		<footer>
+			Powered by SupAgro Montpellier Institut d'éducation a 
+			l'agroenvironnement de Florac et YesWiki.
+		</footer>
+	</section>
+
+	<aside>
+		<a href="wakka.php">
+			<h1>
+				<img src="themes/enviescolaire/images/header1.png" alt="enVie">
+				<img src="themes/enviescolaire/images/header2.png" alt="Scolaire">
+			</h1>
+		</a>
 		<ul>
 			<li><a href="wakka.php">Accueil</a></li>
 			<li><a href="?wiki=Ressources">Ressources</a></li>
 			<li><a href="?wiki=backoffice">Backoffice</a></li>
 		</ul>
-	</nav>
-	<article id="main" role="main" {{doubleclic}}>
-		{WIKINI_PAGE} 
-	</article>
-	<footer>
-	Powered by SupAgro Montpellier Institut d'éducation a l'agroenvironnement de Florac et YesWiki.
-	</footer>
+	</aside>
+
+	
 	{{linkjavascript}}
 </body>
