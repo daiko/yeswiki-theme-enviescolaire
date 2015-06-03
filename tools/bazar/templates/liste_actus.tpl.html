@@ -1,5 +1,5 @@
 <div class="actus">
-<?php foreach($fiches as $fiche): ?>
+<?php foreach ($fiches as $fiche): ?>
 
   <?php 
     //echo $info_res; 
@@ -9,7 +9,7 @@
 
     $contenu = $GLOBALS['wiki']->Format($fiche['bf_contenu']);
 
-    if(isset($fiche['imagebf_image'])) {
+    if (isset($fiche['imagebf_image'])) {
       if (!file_exists('cache/image_230_'.$fiche['imagebf_image'])) 
         $image = redimensionner_image(
           'files/'.$fiche['imagebf_image'], 
@@ -32,9 +32,14 @@
       ENT_COMPAT, 
       TEMPLATES_DEFAULT_CHARSET
     );
+
+    $picto = '';
+    if (isset($fiche['listeListeRessources'])) 
+      $picto = $fiche['listeListeRessources'];
+
   ?>
 
-  <div class='actu picto_action'>
+  <div class='actu picto_<?php echo $picto; ?>'>
   <h2><?php echo $fiche['bf_titre']; ?></h2>
   <p class='actu_info'>Le <?php echo $date; ?></p>
   <?php echo $image; ?>
