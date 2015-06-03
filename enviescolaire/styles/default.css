@@ -1,13 +1,16 @@
 aside { order: 1;}
 section { order: 2;}
+aside.project {order: 3;}
 footer { order: 4;}
 
 body {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-start;
-	margin: 0;
-	padding: 0;*/
+	margin: 0 auto;
+	max-width: 80em;
+	padding: 0;
+
 }
 
 section {
@@ -16,15 +19,11 @@ section {
 }
 
 aside {
-	background: #3c7e75;
-	color: white;
+	
 	padding: 20px 0;
 	margin: 0;
-	max-width: 20em;
-}
-
-aside a {
-	
+	width: 16em;
+	min-width: 16em;
 }
 
 footer {
@@ -42,12 +41,12 @@ aside ul {
 }
 
 aside li {
-	list-style: none;
+	/*list-style: none;*/
 	margin: 5px 0px;
 }
 
 aside a {
-	color: white;
+	color: #ffb640;
 }
 
 /*****************************************************************************
@@ -66,14 +65,14 @@ aside a {
 	box-shadow: 5px 5px 10px #999;
 	display: flex;
 	flex-direction: column;
-	height: 280px;
+	height: 200px;
 	justify-content: center;
 	list-style-type: none;
 	margin: 20px;
 	padding: 10px;
 	text-align: center;
 	text-decoration: none;
-	width: 180px;
+	width: 130px;
 }
 
 .ressource:hover {
@@ -82,7 +81,7 @@ aside a {
 }
 
 .ressource img {
-	max-height: 180px;
+	height: 180px;
 	margin-bottom: 30px;
 }
 
@@ -90,21 +89,21 @@ aside a {
  * Articles
  ****************************************************************************/
 .actus {
-	max-width: 33em;
 	padding : 20px;
-	margin: 0;
+	margin: 0 auto;
 }
 
-.actus * {
+/*.actus * {
 	max-width: 32em;
-}
+}*/
 
 .actu {
 	margin-bottom: 50px;
 }
 
 .actu h2 {
-	border-bottom: solid 1px blue;
+	color: #535353;
+	border-bottom: solid 1px #FFB640;
 }
 
 p.actu_auteur, p.actu_info {
@@ -117,6 +116,35 @@ p.actu_info {
 	font-style: italic;
 }
 
+.actu a {
+	color: #FFB640;
+}
+
+/*****************************************************************************
+ * aside project en première page
+ ****************************************************************************/
+
+div.page_projects, .link_ressources {
+	background: #ffb640;
+	color: white;
+	display: block;
+	margin-bottom: 20px;
+	padding: 5px 20px;
+	width: 100%;
+}
+
+.link_ressources {
+	margin-top: 
+}
+
+div.page_projects h2, .link_ressources h2{
+	font-family: 'Stencil', Fallback, sans-serif;
+	text-transform: uppercase; 
+}
+
+div.page_projects a {
+	color: white;
+}
 
 @keyframes FirstAnimation {
 	from {
@@ -127,14 +155,22 @@ p.actu_info {
 	}
 }
 
-@media (max-width: 40em) {
+@media (max-width: 1024px) {
 
 	body {
-		flex-flow: row wrap;
+		flex-flow: column wrap;
 	}
 
-	aside {
-		max-width: inherit;
+	section, aside {
+		max-width: 100%;
+		width: 100%;
 	}
 
+}
+
+@font-face {
+	font-family: Stencil;
+	font-style: normal;
+	font-weight: normal;
+	src: url(../fonts/Lorimer_No2_Stencil.otf) format('opentype');
 }

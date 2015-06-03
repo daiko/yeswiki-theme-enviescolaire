@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="{{configuration param="charset"}}">
+	<meta name="keywords" content="{{configuration param="meta_keywords"}}">
+	<meta name="description" content="{{configuration param="meta_description"}}">
+	<title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+	{{linkstyle}}
+	{{linkrss}}
+</head>
+
+<body {{parambody}}>
+	<section id="main" role="main" {{doubleclic}}>
+		{WIKINI_PAGE}
+		<footer>
+			Powered by SupAgro Montpellier Institut d'éducation a 
+			l'agroenvironnement de Florac et YesWiki.
+		</footer>
+	</section>
+
+	<aside>
+		<a href="wakka.php">
+			<h1>
+				<img src="themes/enviescolaire/images/header1.png" alt="enVie">
+				<img src="themes/enviescolaire/images/header2.png" alt="Scolaire">
+			</h1>
+		</a>
+		<ul>
+			<li><a href="wakka.php">Accueil</a></li>
+			<li><a href="?wiki=Ressources">Ressources</a></li>
+			<li><a href="?wiki=backoffice">Backoffice</a></li>
+		</ul>
+	</aside>
+
+	
+	{{linkjavascript}}
+</body>
