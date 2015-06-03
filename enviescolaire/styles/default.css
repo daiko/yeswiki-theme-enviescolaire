@@ -122,7 +122,15 @@ p.actu_info {
 
 .vignette_actu {
 	float: right;
-	margin: 10px 0 10px 10px;
+	margin: 0 0 0 20px;
+}
+
+.actu * {
+	z-index: 100;
+}
+
+.picto_action {
+	background: url(../images/picto-action.png) top right no-repeat;
 }
 
 /*****************************************************************************

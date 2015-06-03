@@ -9,15 +9,23 @@
 
     $contenu = $GLOBALS['wiki']->Format($fiche['bf_contenu']);
 
-    if (!file_exists('cache/image_180_'.$fiche['imagebf_image'])) 
-      $image = redimensionner_image(
-        'files/'.$fiche['imagebf_image'], 
-        'cache/image_180_'.$fiche['imagebf_image'], 
-        180, 
-        180
-      ); 
-    else 
-      $image = 'cache/image_180_'.$fiche['imagebf_image'];
+    if(isset($fiche['imagebf_image'])) {
+      if (!file_exists('cache/image_230_'.$fiche['imagebf_image'])) 
+        $image = redimensionner_image(
+          'files/'.$fiche['imagebf_image'], 
+          'cache/image_230_'.$fiche['imagebf_image'], 
+          230, 
+          230
+        ); 
+      else {
+        $image = 'cache/image_230_'.$fiche['imagebf_image'];
+        $image = 
+          "<img class='vignette_actu' src='"
+          .$image
+          ."' alt='vignette article' />";
+      }
+    }
+    else $image = "";
 
     $titre = htmlspecialchars(
       $fiche['bf_titre'], 
@@ -26,10 +34,10 @@
     );
   ?>
 
-  <div class='actu'>
+  <div class='actu picto_action'>
   <h2><?php echo $fiche['bf_titre']; ?></h2>
   <p class='actu_info'>Le <?php echo $date; ?></p>
-  <img class='vignette_actu' src='<?php echo $image; ?>' alt='vignette article'>
+  <?php echo $image; ?>
   <p class='actu_contenu'><?php echo $contenu; ?></p>
   <!--<p class="actu_auteur"><?php echo $fiche['createur']; ?></p>-->
   </div>
