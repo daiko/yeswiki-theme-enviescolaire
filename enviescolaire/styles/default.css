@@ -10,20 +10,21 @@ body {
 	margin: 0 auto;
 	max-width: 80em;
 	padding: 0;
+}
 
+aside, section {
+	box-sizing: border-box;
 }
 
 section {
-	padding-left: 10px;
 	align-self: stretch;
+	padding:  0 20px;
 }
 
 aside {
-	
-	padding: 20px 0;
 	margin: 0;
-	width: 16em;
-	min-width: 16em;
+	width: 18em;
+	min-width: 18em;
 }
 
 footer {
@@ -37,11 +38,9 @@ footer {
 aside ul {
 	display: inline-flex;
 	flex-direction: column;
-	
 }
 
 aside li {
-	/*list-style: none;*/
 	margin: 5px 0px;
 }
 
@@ -89,13 +88,8 @@ aside a {
  * Articles
  ****************************************************************************/
 .actus {
-	padding : 20px;
 	margin: 0 auto;
 }
-
-/*.actus * {
-	max-width: 32em;
-}*/
 
 .actu {
 	margin-bottom: 50px;
@@ -107,8 +101,8 @@ aside a {
 }
 
 p.actu_auteur, p.actu_info {
-	width: 100%;
 	text-align: right;
+	width: 100%;
 }
 
 p.actu_info {
@@ -125,12 +119,37 @@ p.actu_info {
 	margin: 0 0 0 20px;
 }
 
-.actu * {
-	z-index: 100;
+.picto_ {
+	background: url(../images/picto-Autres.png) top left no-repeat;
 }
 
-.picto_action {
-	background: url(../images/picto-action.png) top right no-repeat;
+/*Mediation par les paires*/
+.picto_1 {
+	background: url(../images/picto-MediationParLesPaires.png) top left no-repeat;
+}
+
+/*Parole d'élèves*/
+.picto_2 {
+	background: url(../images/picto-ParoleDEleves.png) top left no-repeat;
+}
+
+/*Délégués, soyez acteur*/
+.picto_3 {
+	background: url(../images/picto-DeleguesSoyezActeur.png) top left no-repeat;
+}
+
+/*En plein nature*/
+.picto_4 {
+	background: url(../images/picto-EnPleineNature.png) top left no-repeat;
+}
+
+/*Animal éducateur*/
+.picto_5 {
+	background: url(../images/picto-AnimalEducateur.png) top left no-repeat;
+}
+
+.picto_6 {
+	background: url(../images/picto-Autres.png) top left no-repeat;
 }
 
 /*****************************************************************************
@@ -139,6 +158,7 @@ p.actu_info {
 
 div.page_projects, .link_ressources {
 	background: #ffb640;
+	box-sizing: border-box;
 	color: white;
 	display: block;
 	margin-bottom: 20px;
@@ -147,7 +167,7 @@ div.page_projects, .link_ressources {
 }
 
 .link_ressources {
-	margin-top: 
+	margin-top: 10px;
 }
 
 div.page_projects h2, .link_ressources h2{
@@ -178,12 +198,11 @@ div.page_projects a {
 		max-width: 100%;
 		width: 100%;
 	}
-
 }
 
 @font-face {
 	font-family: Stencil;
 	font-style: normal;
 	font-weight: normal;
-	src: url(../fonts/Lorimer_No2_Stencil.otf) format('opentype');
+	src: url(../fonts/lorimerno2stencil.ttf);
 }
