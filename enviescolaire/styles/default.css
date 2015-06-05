@@ -7,7 +7,7 @@ body {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-start;
-	margin: 0 auto;
+	margin: 0;
 	max-width: 80em;
 	padding: 0;
 }
@@ -59,9 +59,7 @@ aside a {
 }
 
 .ressource {
-	background: white;
-	border-radius: 10px;
-	box-shadow: 5px 5px 10px #999;
+	background: green;
 	display: flex;
 	flex-direction: column;
 	height: 200px;
@@ -84,6 +82,9 @@ aside a {
 	margin-bottom: 30px;
 }
 
+.ressources a {
+	color: white;
+}
 /*****************************************************************************
  * Articles
  ****************************************************************************/
@@ -96,8 +97,7 @@ aside a {
 }
 
 .actu h2 {
-	color: #535353;
-	border-bottom: solid 1px #FFB640;
+	color: #FFB640;
 }
 
 p.actu_auteur, p.actu_info {
@@ -111,7 +111,7 @@ p.actu_info {
 }
 
 .actu a {
-	color: #FFB640;
+	color: #48A2E8;
 }
 
 .vignette_actu {
@@ -120,36 +120,36 @@ p.actu_info {
 }
 
 .picto_ {
-	background: url(../images/picto-Autres.png) top left no-repeat;
+	background: url(../images/picto-Autres.png) top right no-repeat;
 }
 
 /*Mediation par les paires*/
 .picto_1 {
-	background: url(../images/picto-MediationParLesPaires.png) top left no-repeat;
+	background: url(../images/picto-MediationParLesPaires.png) top right no-repeat;
 }
 
 /*Parole d'élèves*/
 .picto_2 {
-	background: url(../images/picto-ParoleDEleves.png) top left no-repeat;
+	background: url(../images/picto-ParoleDEleves.png) top right no-repeat;
 }
 
 /*Délégués, soyez acteur*/
 .picto_3 {
-	background: url(../images/picto-DeleguesSoyezActeur.png) top left no-repeat;
+	background: url(../images/picto-DeleguesSoyezActeur.png) top right no-repeat;
 }
 
 /*En plein nature*/
 .picto_4 {
-	background: url(../images/picto-EnPleineNature.png) top left no-repeat;
+	background: url(../images/picto-EnPleineNature.png) top right no-repeat;
 }
 
 /*Animal éducateur*/
 .picto_5 {
-	background: url(../images/picto-AnimalEducateur.png) top left no-repeat;
+	background: url(../images/picto-AnimalEducateur.png) top right no-repeat;
 }
 
 .picto_6 {
-	background: url(../images/picto-Autres.png) top left no-repeat;
+	background: url(../images/picto-Autres.png) top right no-repeat;
 }
 
 /*****************************************************************************
@@ -172,7 +172,6 @@ div.page_projects, .link_ressources {
 
 div.page_projects h2, .link_ressources h2{
 	font-family: 'Stencil', Fallback, sans-serif;
-	text-transform: uppercase; 
 }
 
 div.page_projects a {
@@ -197,6 +196,10 @@ div.page_projects a {
 	section, aside {
 		max-width: 100%;
 		width: 100%;
+	}
+
+	div.page_projects {
+		display: none;
 	}
 }
 

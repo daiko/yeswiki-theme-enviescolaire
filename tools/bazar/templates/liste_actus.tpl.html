@@ -1,6 +1,7 @@
 <div class="actus">
 <?php foreach ($fiches as $fiche): ?>
 
+
   <?php 
     //echo $info_res; 
     setlocale(LC_TIME, 'fr_FR.UTF-8');
@@ -37,10 +38,13 @@
     if (isset($fiche['listeListeRessources'])) 
       $picto = $fiche['listeListeRessources'];
 
+    $link = '<a href="?wiki='.$fiche['id_fiche'].'" >';
   ?>
 
   <div class='actu picto_<?php echo $picto; ?>'>
+  <?php echo $link; ?>
   <h2><?php echo $fiche['bf_titre']; ?></h2>
+  </a>
   <p class='actu_info'>Le <?php echo $date; ?></p>
   <?php echo $image; ?>
   <p class='actu_contenu'><?php echo $contenu; ?></p>
