@@ -34,14 +34,10 @@
       TEMPLATES_DEFAULT_CHARSET
     );
 
-    $picto = '';
-    if (isset($fiche['listeListeRessources'])) 
-      $picto = $fiche['listeListeRessources'];
-
     $link = '<a href="?wiki='.$fiche['id_fiche'].'" >';
   ?>
 
-  <div class='actu picto_<?php echo $picto; ?>'>
+  <div class='actu'>
   <?php echo $link; ?>
   <h2><?php echo $fiche['bf_titre']; ?></h2>
   </a>

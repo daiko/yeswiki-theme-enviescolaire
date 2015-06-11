@@ -86,15 +86,33 @@ aside a {
 	color: white;
 }
 
-.color_1 {background: chocolate;}
-.color_2 {background: green;}
-.color_3 {background: red;}
-.color_4 {background: blue;}
-.color_5 {background: purple;}
-.color_6 {background: orange;}
-.color_7 {background: darkblue;}
-.color_7 {background: gold;}
+.color_1 {
+	background: chocolate;
+}
 
+.color_2 {
+	background: green;
+}
+
+.color_3 {
+	background: red;
+}
+
+.color_4 {
+	background: blue;
+}
+
+.color_5 {
+	background: purple;
+}
+
+.color_6 {
+	background: orange;
+}
+
+.color_7 {
+	background: darkblue;
+}
 
 /*****************************************************************************
  * Articles
@@ -128,39 +146,6 @@ p.actu_info {
 .vignette_actu {
 	float: right;
 	margin: 0 0 0 20px;
-}
-
-.picto_ {
-	background: url(../images/picto-Autres.png) top right no-repeat;
-}
-
-/*Mediation par les paires*/
-.picto_1 {
-	background: url(../images/picto-MediationParLesPaires.png) top right no-repeat;
-}
-
-/*Parole d'élèves*/
-.picto_2 {
-	background: url(../images/picto-ParoleDEleves.png) top right no-repeat;
-}
-
-/*Délégués, soyez acteur*/
-.picto_3 {
-	background: url(../images/picto-DeleguesSoyezActeur.png) top right no-repeat;
-}
-
-/*En plein nature*/
-.picto_4 {
-	background: url(../images/picto-EnPleineNature.png) top right no-repeat;
-}
-
-/*Animal éducateur*/
-.picto_5 {
-	background: url(../images/picto-AnimalEducateur.png) top right no-repeat;
-}
-
-.picto_6 {
-	background: url(../images/picto-Autres.png) top right no-repeat;
 }
 
 /*****************************************************************************
