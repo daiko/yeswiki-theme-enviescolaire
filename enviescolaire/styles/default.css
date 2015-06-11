@@ -85,6 +85,17 @@ aside a {
 .ressources a {
 	color: white;
 }
+
+.color_1 {background: chocolate;}
+.color_2 {background: green;}
+.color_3 {background: red;}
+.color_4 {background: blue;}
+.color_5 {background: purple;}
+.color_6 {background: orange;}
+.color_7 {background: darkblue;}
+.color_7 {background: gold;}
+
+
 /*****************************************************************************
  * Articles
  ****************************************************************************/

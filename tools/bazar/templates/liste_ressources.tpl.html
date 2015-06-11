@@ -16,9 +16,11 @@ $titre = htmlspecialchars($fiche['bf_titre'],
 
 $file = "files/".$fiche['fichierbf_file'];
 
+$color = 'color_'.$fiche['listeListeRessources'];
+
 ?>
 
-<a class="ressource" href="<?php echo $file; ?>">
+<a class="ressource <?php echo $color; ?>" href="<?php echo $file; ?>">
 	<img src="<?php echo $image; ?>" />
 	<p class="name"><?php echo $titre; ?></p>
 </a>
