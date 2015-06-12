@@ -1,11 +1,9 @@
 <div class="actus">
-<?php foreach ($fiches as $fiche): ?>
-
-
-  <?php 
+<?php 
+  foreach ($fiches as $fiche): 
     //echo $info_res; 
     setlocale(LC_TIME, 'fr_FR.UTF-8');
-    $date = new DateTime($fiche['date_creation']);
+    $date = new DateTime($fiche['date_creation_fiche']);
     $date = strftime('%A %d %B %G à %H:%I', $date->getTimestamp());
 
     $contenu = $GLOBALS['wiki']->Format($fiche['bf_contenu']);
@@ -35,6 +33,14 @@
     );
 
     $link = '<a href="?wiki='.$fiche['id_fiche'].'" >';
+
+    $tags = explode(',', $fiche['motscles']);
+    $text_tags = "";
+    foreach ($tags as $tag) {
+      $text_tags .= '<a href="?wiki='.$fiche['id_fiche'].'/listpages&tags=';
+      $text_tags .= $tag.'" class="tag-label">'.$tag.'</a> ';
+    }
+
   ?>
 
   <div class='actu'>
@@ -44,7 +50,7 @@
   <p class='actu_info'>Le <?php echo $date; ?></p>
   <?php echo $image; ?>
   <p class='actu_contenu'><?php echo $contenu; ?></p>
-  <!--<p class="actu_auteur"><?php echo $fiche['createur']; ?></p>-->
+  <?php echo $text_tags; ?>
   </div>
 <?php endforeach; ?>
 </div>

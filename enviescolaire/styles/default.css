@@ -8,7 +8,6 @@ body {
 	flex-flow: row nowrap;
 	justify-content: flex-start;
 	margin: 0;
-	max-width: 80em;
 	padding: 0;
 }
 
@@ -19,6 +18,7 @@ aside, section {
 section {
 	align-self: stretch;
 	padding:  0 20px;
+	width: 44em;
 }
 
 aside {
@@ -47,6 +47,8 @@ aside li {
 aside a {
 	color: #ffb640;
 }
+
+
 
 /*****************************************************************************
  * Ressources
@@ -149,6 +151,66 @@ p.actu_info {
 }
 
 /*****************************************************************************
+ * Tags
+ ****************************************************************************/
+
+ul.nuage {
+	align-items: space-around;
+	/*align-content: flex-start;*/
+	display: flex;
+	flex-flow: row wrap;
+	height: 16em;
+	justify-content: space-around;
+	margin-top: 50px;
+}
+
+.tag-label {
+	background-color: lightblue !important;
+	border-radius: 3px !important;
+	color: grey !important;
+	display: inline-block !important;
+	padding: 2px 4px !important;
+	vertical-align: baseline !important;
+	white-space: nowrap !important;
+}
+
+.tag-link {
+	border: solid white 5px !important;
+	border-radius: 2em 4em !important;
+	padding: 10px  !important;
+	margin:  auto !important;
+	background: lightblue !important;
+	color: grey  !important;
+	line-height: normal  !important;
+}
+
+.size* { font-size: normal !important;}
+
+.size1 {
+	transform: scale(1.0) !important;
+}
+
+.size2 {
+	transform: scale(2.0) !important;
+}
+
+.size3 {
+	transform: scale(3.0) !important;
+}
+
+.size4 {
+	transform: scale(4.0) !important;
+}
+
+.size5 {
+	transform: scale(5.0) !important;
+}
+
+.size6 {
+	transform: scale(6.0) !important;
+}
+
+/*****************************************************************************
  * aside project en première page
  ****************************************************************************/
 
@@ -205,3 +267,7 @@ div.page_projects a {
 	font-weight: normal;
 	src: url(../fonts/lorimerno2stencil.ttf);
 }
+
+/* BAZAR*/
+
+.input-xxlarge { max-width: 22em;}
