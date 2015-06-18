@@ -82,6 +82,8 @@ aside a {
 .ressource img {
 	height: 180px;
 	margin-bottom: 30px;
+	background-color: white;
+	padding: 10px;
 }
 
 .ressources a {
@@ -257,6 +259,10 @@ div.page_projects a {
 	}
 
 	div.page_projects {
+		display: none;
+	}
+
+	div.boite_nuage {
 		display: none;
 	}
 }
