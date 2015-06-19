@@ -1,0 +1,5 @@
+texte***bf_titre***Titre de l'article***255***255*** *** *** ***1***0***
+liste***ListeRessources***Catégorie*** *** ***1*** *** ***1***1***
+image***bf_image***Image de présentation (facultatif)***140***140***600***600***right*** *** ***Image au format jpg, gif ou png.
+textelong***bf_contenu***Texte***80***10*** *** ***wiki***0*** *** ***@admins
+tags***motscles***Mots clés***60***255*** *** *** ***0***0***

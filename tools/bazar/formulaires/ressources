@@ -1,0 +1,4 @@
+texte***bf_titre***Nom de la ressource***255***255*** *** *** ***1***
+liste***ListeRessources***Type de ressource*** *** ***1*** *** ***1***1***
+image***bf_image***Image de présentation (facultatif)***140***140***600***600***right*** *** ***Image au format jpg, gif ou png.
+lien_internet***url***Adresse URL***60***255***http://*** *** ***1***0***

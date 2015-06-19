@@ -52,8 +52,10 @@
       TEMPLATES_DEFAULT_CHARSET
     );
 
+    // Lien vers l'article
     $link = '<a href="?wiki='.$fiche['id_fiche'].'" >';
 
+    // Liste des tags
     $tags = explode(',', $fiche['motscles']);
     $text_tags = "";
     foreach ($tags as $tag) {

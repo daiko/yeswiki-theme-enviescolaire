@@ -15,13 +15,13 @@ $titre = htmlspecialchars($fiche['bf_titre'],
             TEMPLATES_DEFAULT_CHARSET
         );
 
-$file = "files/".$fiche['fichierbf_file'];
+$url = $fiche['url'];
 
 $color = 'color_'.$fiche['listeListeRessources'];
 
 ?>
 
-<a class="ressource <?php echo $color; ?>" href="<?php echo $file; ?>">
+<a class="ressource <?php echo $color; ?>" href="<?php echo $url; ?>">
 	<img src="<?php echo $image; ?>" />
 	<p class="name"><?php echo $titre; ?></p>
 </a>
