@@ -147,6 +147,10 @@ p.actu_info {
 	color: #48A2E8;
 }
 
+.actu_lien {
+	float: right;
+}
+
 .vignette_actu {
 	float: right;
 	margin: 0 0 0 20px;
