@@ -23,8 +23,9 @@ section {
 
 aside {
 	margin: 0;
-	width: 18em;
 	min-width: 18em;
+	width: 18em;
+	
 }
 
 footer {
@@ -47,8 +48,6 @@ aside li {
 aside a {
 	color: #ffb640;
 }
-
-
 
 /*****************************************************************************
  * Ressources
@@ -162,7 +161,6 @@ p.actu_info {
 
 ul.nuage {
 	align-items: space-around;
-	/*align-content: flex-start;*/
 	display: flex;
 	flex-flow: row wrap;
 	height: 16em;
@@ -170,77 +168,58 @@ ul.nuage {
 	margin-top: 50px;
 }
 
-.tag-label {
-	background-color: lightblue !important;
-	border-radius: 3px !important;
-	color: grey !important;
-	display: inline-block !important;
-	padding: 2px 4px !important;
-	vertical-align: baseline !important;
-	white-space: nowrap !important;
-}
-
 .tag-link {
-	border: solid white 5px !important;
-	border-radius: 2em 4em !important;
-	padding: 10px  !important;
-	margin:  auto !important;
-	background: lightblue !important;
-	color: grey  !important;
-	line-height: normal  !important;
+	font-family: 'EB_Garamond', Fallback, sans-serif !important;
+	color: #58585a !important;
 }
 
-.size* { font-size: normal !important;}
-
-.size1 {
-	transform: scale(1.0) !important;
-}
-
-.size2 {
-	transform: scale(2.0) !important;
-}
-
-.size3 {
-	transform: scale(3.0) !important;
-}
-
-.size4 {
-	transform: scale(4.0) !important;
-}
-
-.size5 {
-	transform: scale(5.0) !important;
-}
-
-.size6 {
-	transform: scale(6.0) !important;
-}
+.size1 { font-size: 18px !important; }
+.size2 { font-size: 24px !important; }
+.size3 { font-size: 36px !important; }
+.size4 { font-size: 48px !important; }
+.size5 { font-size: 64px !important; }
+.size6 { font-size: 72px !important; }
 
 /*****************************************************************************
  * aside project en première page
  ****************************************************************************/
 
-div.page_projects, .link_ressources {
+div.page_projects, .link_ressources, .link_newsletter, .link_search {
 	background: #ffb640;
 	box-sizing: border-box;
-	color: white;
+	color: #58585a;
 	display: block;
 	margin-bottom: 20px;
-	padding: 5px 20px;
+	padding: 10px 20px;
 	width: 100%;
 }
 
 .link_ressources {
+	background: #8cbb15;
 	margin-top: 10px;
 }
 
-div.page_projects h2, .link_ressources h2{
-	font-family: 'Stencil', Fallback, sans-serif;
+.link_newsletter {
+	background: #f9db07;
+}
+
+
+.link_search {
+	background: #ff4040;
+}
+div.page_projects h2, .link_ressources h2, .link_newsletter h2{
+	color: #58585a;
+	font-family: 'EB_Garamond', Fallback, sans-serif;
+	font-size: 46px;
+	margin: 10px auto;
 }
 
 div.page_projects a {
-	color: white;
+	color: #58585a;
 }
+
+.search-query, .form-search .input-append .btn { border-radius: 0 ! important;}
+.search-query { width: 140px; }
 
 @keyframes FirstAnimation {
 	from {
@@ -272,12 +251,11 @@ div.page_projects a {
 }
 
 @font-face {
-	font-family: Stencil;
+	font-family: 'EB_Garamond';
 	font-style: normal;
 	font-weight: normal;
-	src: url(../fonts/lorimerno2stencil.ttf);
+	src: url(../fonts/EBGaramond12-Regular.woff);
 }
 
 /* BAZAR*/
-
 .input-xxlarge { max-width: 22em;}
