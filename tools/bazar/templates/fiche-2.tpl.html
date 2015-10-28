@@ -1,0 +1,89 @@
+<div class="actu">
+<?php 
+
+    //formattage de la date.
+    setlocale(LC_TIME, 'fr_FR.UTF-8');
+    $date = new DateTime($fiche['date_creation_fiche']);
+    $date = strftime('%A %d %B %G à %H:%I', $date->getTimestamp());
+
+    /*************************************************************************
+     * Mise en forme du contenu de l'article
+     ************************************************************************/
+    // sauvegarde de la page demandée.
+    $curPage = $GLOBALS['wiki']->GetPageTag();
+    $curPageContent = $GLOBALS['wiki']->page;
+
+    // On indique la fiche courrante pour trompé attach afin que les liens 
+    // soient bon.
+    $GLOBALS['wiki']->tag = trim($fiche['id_fiche']);
+    $GLOBALS['wiki']->page = $GLOBALS['wiki']->LoadPage($fiche['id_fiche']);
+
+    $contenu = '';
+    $show_link = true;
+    if(isset($fiche['bf_chapeau']))
+        $chapeau = $GLOBALS['wiki']->Format($fiche['bf_chapeau']);
+    
+    
+    if(isset($fiche['bf_contenu']))
+        $contenu = $GLOBALS['wiki']->Format($fiche['bf_contenu']);
+
+    // restauration de la page demandée
+    $GLOBALS['wiki']->tag = $curPage;
+    $GLOBALS['wiki']->page = $curPageContent;
+
+    /*************************************************************************
+     * Thumbnail de l'article
+    *************************************************************************/
+    $image = "";
+    if (isset($fiche['imagebf_image'])) {
+        if (!file_exists('cache/image_230_'.$fiche['imagebf_image'])) 
+            $image = redimensionner_image(
+                'files/'.$fiche['imagebf_image'], 
+                'cache/image_230_'.$fiche['imagebf_image'], 
+                230, 230
+            ); 
+        else {
+            $image = 
+                "<img class='vignette_actu' src='"
+                .'cache/image_230_'.$fiche['imagebf_image']
+                ."' alt='vignette article' />";
+        }
+    }
+
+    // Mise en forme du titre de l'article.
+    $titre = htmlspecialchars(
+      $fiche['bf_titre'], 
+      ENT_COMPAT, 
+      TEMPLATES_DEFAULT_CHARSET
+    );
+
+    // Lien vers l'article
+    $link = '?wiki='.$fiche['id_fiche'];
+
+    // Liste des tags
+    if(isset($fiche['motscles'])) {
+        $tags = explode(',', $fiche['motscles']);
+        $text_tags = "";
+        foreach ($tags as $tag) {
+            $text_tags .= '<a href="?wiki='.$fiche['id_fiche'].'/listpages&tags=';
+            $text_tags .= $tag.'" class="tag-label">'.$tag.'</a> ';
+        }
+    }
+  ?>
+
+<div class='actu'>
+    <a href="<?php echo $link; ?>">
+        <h2><?php echo $fiche['bf_titre']; ?></h2>
+    </a>
+    <p class='actu_info'>Le <?php echo $date; ?></p>
+    
+    <?php echo $image; ?>
+    
+    <p class='actu_chapeau'><?php echo $chapeau; ?></p>
+
+    <p class='actu_contenu'><?php echo $contenu; ?></p>
+
+    <?php echo $text_tags; ?>
+</div>
+
+</div>
