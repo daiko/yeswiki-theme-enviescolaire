@@ -1,19 +1,28 @@
-aside { order: 1;}
-section { order: 2;}
-aside.project {order: 3;}
-footer { order: 4;}
+/*****************************************************************************
+Orange : #ffb640;
+Bleu : #48A2E8;
+Vert : #8cbb15;
+Rouge : #FF4040;
+Jaune : #F9DB07;
+Gris : #58585A;
+*****************************************************************************/
+
+
+aside { order: 1; }
+section { order: 2; }
+aside.project { order: 3; }
+footer { order: 4; }
 
 body {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-start;
+	line-height: normal;
 	margin: 0;
 	padding: 0;
 }
 
-aside, section {
-	box-sizing: border-box;
-}
+aside, section { box-sizing: border-box; }
 
 section {
 	align-self: stretch;
@@ -25,7 +34,6 @@ aside {
 	margin: 0;
 	min-width: 18em;
 	width: 18em;
-	
 }
 
 footer {
@@ -41,13 +49,17 @@ aside ul {
 	flex-direction: column;
 }
 
-aside li {
-	margin: 5px 0px;
+aside li { margin: 5px 0px; }
+aside a { color: #ffb640; text-align: center;}
+
+aside p {
+	color: #58585a;
+	font-size: 120%;
+	text-align: center;
 }
 
-aside a {
-	color: #ffb640;
-}
+
+
 
 /*****************************************************************************
  * Ressources
@@ -60,7 +72,7 @@ aside a {
 }
 
 .ressource {
-	background: green;
+	background: #8cbb15;
 	display: flex;
 	flex-direction: column;
 	height: 200px;
@@ -89,39 +101,21 @@ aside a {
 	color: white;
 }
 
-.color_1 {
-	background: chocolate;
-}
-
-.color_2 {
-	background: green;
-}
-
-.color_3 {
-	background: red;
-}
-
-.color_4 {
-	background: blue;
-}
-
-.color_5 {
-	background: purple;
-}
-
-.color_6 {
-	background: orange;
-}
-
-.color_7 {
-	background: darkblue;
-}
+.color_1  { background: pink; }
+.color_2  { background: #ffb640; }
+.color_3  { background: #48A2E8; }
+.color_4  { background: #8cbb15; }
+.color_5  { background: #FF4040; }
+.color_6  { background: #F9DB07; }
+.color_99 { background: #58585A; }
 
 /*****************************************************************************
  * Articles
  ****************************************************************************/
 .actus {
 	margin: 0 auto;
+	display: flex;
+	flex-flow: column;
 }
 
 .actu {
@@ -138,12 +132,19 @@ p.actu_auteur, p.actu_info {
 }
 
 p.actu_info {
-	color: grey;
+	color: #58585A;
 	font-style: italic;
 }
 
 .actu a {
 	color: #48A2E8;
+}
+
+.actu .tag-label {
+	background: #48A2E8;
+	border-radius: 3px;
+	color: white;
+	padding: 5px;
 }
 
 .actu_lien {
@@ -153,6 +154,12 @@ p.actu_info {
 .vignette_actu {
 	float: right;
 	margin: 0 0 0 20px;
+}
+
+.actu_contenu:after {
+	clear: both;
+	content:'';
+	display: block;
 }
 
 /*****************************************************************************
@@ -170,21 +177,22 @@ ul.nuage {
 
 .tag-link {
 	font-family: 'EB_Garamond', Fallback, sans-serif !important;
-	color: #58585a !important;
+	color: #48a2e8 !important;
 }
 
-.size1 { font-size: 18px !important; }
-.size2 { font-size: 24px !important; }
-.size3 { font-size: 36px !important; }
-.size4 { font-size: 48px !important; }
-.size5 { font-size: 64px !important; }
-.size6 { font-size: 72px !important; }
+.size1 { font-size: 120% !important; }
+.size2 { font-size: 140% !important; }
+.size3 { font-size: 160% !important; }
+.size4 { font-size: 180% !important; }
+.size5 { font-size: 200% !important; }
+.size6 { font-size: 220% !important; }
 
 /*****************************************************************************
  * aside project en première page
  ****************************************************************************/
 
-div.page_projects, .link_ressources, .link_newsletter, .link_search {
+div.page_projects, .link_ressources, .link_newsletter, .link_search, 
+.link_quiquonest {
 	background: #ffb640;
 	box-sizing: border-box;
 	color: #58585a;
@@ -203,15 +211,25 @@ div.page_projects, .link_ressources, .link_newsletter, .link_search {
 	background: #f9db07;
 }
 
-
 .link_search {
 	background: #ff4040;
+	text-align: center;
 }
-div.page_projects h2, .link_ressources h2, .link_newsletter h2{
+
+.link_quiquonest {
+	background: #58585a;
+}
+
+div.page_projects h2, .link_ressources h2, .link_newsletter h2, .link_quiquonest h2 {
 	color: #58585a;
 	font-family: 'EB_Garamond', Fallback, sans-serif;
-	font-size: 46px;
+	font-size: 300%;
+	line-height: normal;
 	margin: 10px auto;
+}
+
+.link_quiquonest h2 {
+	color: white;
 }
 
 div.page_projects a {
@@ -221,19 +239,12 @@ div.page_projects a {
 .search-query, .form-search .input-append .btn { border-radius: 0 ! important;}
 .search-query { width: 140px; }
 
-@keyframes FirstAnimation {
-	from {
-		transform: scale(1.0);
-	}
-	to {
-		transform: scale(1.1);
-	}
-}
-
 @media (max-width: 1024px) {
 
-	body {
-		flex-flow: column wrap;
+	body { 
+		flex-flow: column wrap; 
+		font-size: 175%;
+		line-height: normal;
 	}
 
 	section, aside {
@@ -241,13 +252,15 @@ div.page_projects a {
 		width: 100%;
 	}
 
-	div.page_projects {
-		display: none;
+	aside h1 { 
+		width: 100%; 
+		text-align: center;
 	}
 
-	div.boite_nuage {
-		display: none;
-	}
+	.link_search { display: none; }
+
+	div.page_projects { display: none; }
+	div.boite_nuage { display: none; }
 }
 
 @font-face {
