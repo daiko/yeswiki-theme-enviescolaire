@@ -13,20 +13,26 @@
         {WIKINI_PAGE}
     </section>
 
-    <aside>
+    <aside class="left">
         <a href="wakka.php">
             <h1>
-                <img src="themes/enviescolaire/images/header1.png" alt="enVie">
-                <img src="themes/enviescolaire/images/header2.png" alt="Scolaire">
+                <img 
+                    class="logo" alt="Scolaire"
+                    src="themes/enviescolaire/images/header.png"    
+                >
             </h1>
         </a>
+        <p>Le site des élèves acteurs de l'enseignement agricole</p>
+        <p><a href="?wiki=SupAgro">Qui qu'on est ?</a></p>
+
     </aside>
 
     <aside class="project">
         <a class="link_ressources" href="?wiki=ressources"><h2>Ressources</h2></a>
         {{include page="ProjetS" class="page_projects" doubleclic="0"}}
-        <span class="link_search" >{{moteurrecherche class="mr_enviesco" template="moteurrecherche_basic.tpl.html"}}</span>
         <a class="link_newsletter" href="?wiki=newsletter"><h2>Newsletter</h2></a>
+        <a class="link_quiquonest" href="?wiki=QuiQuonEst"><h2>SupaWhat?</h2></a>
+        <span class="link_search" >{{moteurrecherche class="mr_enviesco" template="moteurrecherche_basic.tpl.html"}}</span>
         {{nuagetag}}
     </aside>
     
