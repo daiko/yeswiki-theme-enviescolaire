@@ -66,6 +66,7 @@ aside p {
  ****************************************************************************/
 
 .ressources {
+	align-items: flex-start;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
@@ -73,10 +74,12 @@ aside p {
 
 .ressource {
 	background: #8cbb15;
-	display: flex;
+	/*display: flex;
 	flex-direction: column;
-	height: 200px;
-	justify-content: center;
+	flex-grow: 0;
+	flex-shrink: 0;*/
+	height: 300px;
+	/*justify-content: center;*/
 	list-style-type: none;
 	margin: 20px;
 	padding: 10px;
@@ -90,11 +93,21 @@ aside p {
 	transform: scale(1.1);
 }
 
+.cadre_image_ressource {
+	align-items: center;
+	background: white;
+	display: flex;
+	height: 200px;
+	justify-content : center;
+	margin-bottom: 10px;
+	max-height: 200px;
+	overflow: hidden;
+	width: 100%;
+}
+
 .ressource img {
-	height: 180px;
-	margin-bottom: 30px;
-	background-color: white;
-	padding: 10px;
+	max-height: 180px;
+	max-width: 120px;
 }
 
 .ressources a {

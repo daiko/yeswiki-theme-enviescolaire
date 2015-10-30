@@ -22,7 +22,9 @@ $color = 'color_'.$fiche['listeListeCategories'];
 ?>
 
 <a class="ressource <?php echo $color; ?>" href="<?php echo $url; ?>">
-	<img src="<?php echo $image; ?>" />
+	<div class='cadre_image_ressource'>
+        <img src="<?php echo $image; ?>" />
+    </div> <br />
 	<p class="name"><?php echo $titre; ?></p>
 </a>
 <?php endforeach; ?>
