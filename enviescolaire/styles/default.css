@@ -22,7 +22,7 @@ body {
 	padding: 0;
 }
 
-aside, section { box-sizing: border-box; }
+header, aside, section { box-sizing: border-box; }
 
 section {
 	align-self: stretch;
@@ -30,7 +30,7 @@ section {
 	width: 44em;
 }
 
-aside {
+header, aside {
 	margin: 0;
 	min-width: 18em;
 	width: 18em;
@@ -38,6 +38,10 @@ aside {
 
 footer {
 	text-align: center;
+}
+
+footer a {
+	color: grey;
 }
 
 /*****************************************************************************
@@ -175,7 +179,7 @@ p.actu_info {
 	display: block;
 }
 
-.chapeau {
+.actu_chapeau {
 	font-size: 17px;
 }
 
