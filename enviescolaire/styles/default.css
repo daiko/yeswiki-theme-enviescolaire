@@ -22,7 +22,15 @@ body {
 	padding: 0;
 }
 
-header, aside, section { box-sizing: border-box; }
+header, aside, section { 
+	box-sizing: border-box; 
+}
+
+header p {
+	color: #58585a;
+	font-size: 120%;
+	text-align: center;
+}
 
 section {
 	align-self: stretch;
@@ -56,14 +64,6 @@ aside ul {
 
 aside li { margin: 5px 0px; }
 aside a { color: #ffb640; text-align: center;}
-
-aside p {
-	color: #58585a;
-	font-size: 120%;
-	text-align: center;
-}
-
-
 
 
 /*****************************************************************************
@@ -214,7 +214,7 @@ ul.nuage {
  ****************************************************************************/
 
 div.page_projects, .link_ressources, .link_newsletter, .link_search, 
-.link_quiquonest {
+.link_quesaco {
 	background: #ffb640;
 	box-sizing: border-box;
 	color: #58585a;
@@ -238,7 +238,7 @@ div.page_projects, .link_ressources, .link_newsletter, .link_search,
 	text-align: center;
 }
 
-.link_quiquonest {
+.link_quesaco {
 	background: #58585a;
 }
 
@@ -250,8 +250,12 @@ div.page_projects h2, .link_ressources h2, .link_newsletter h2, .link_quiquonest
 	margin: 10px auto;
 }
 
-.link_quiquonest h2 {
+.link_quesaco h2 {
 	color: white;
+}
+
+.link_quesaco:hover {
+	text-decoration-color: white;
 }
 
 div.page_projects a {
