@@ -1,6 +1,6 @@
 texte***bf_titre***Titre de l'article***255***255*** *** *** ***1***0***
-liste***ListeRessources***Catégorie*** *** ***1*** *** ***1***1***
+liste***ListeProjets***Projets*** *** ***1*** *** ***1***1***
 image***bf_image***Image de présentation (facultatif)***140***140***600***600***right*** *** ***Votre image doit être au format .jpg ou .gif ou .png
-textelong***bf_chapeau***Chapeau***80***5*** *** ***wiki***0*** *** ***@admins
-textelong***bf_contenu***Texte***80***20*** *** ***wiki***0*** *** ***@admins
+textelong***bf_chapeau***Chapeau***80***5*** *** ***wiki***0*** *** ***
+textelong***bf_contenu***Texte***80***20*** *** ***wiki***0*** *** ***
 tags***motscles***Mots clés***60***255*** *** *** ***0***0***
