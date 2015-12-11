@@ -1,33 +1,40 @@
 <div class="ressources">
-<?php shuffle($fiches); ?>
-
-<?php foreach($fiches as $fiche): ?>
-
 <?php 
-// Redimmension l'image et la met en cache si necessaire
-if (!file_exists('cache/image_180_'.$fiche['imagebf_image'])) 
-	$image = redimensionner_image(
-		'files/'.$fiche['imagebf_image'], 
-		'cache/image_180_'.$fiche['imagebf_image'], 180, 180); 
-else 
-	$image = 'cache/image_180_'.$fiche['imagebf_image'];
+    shuffle($fiches); 
 
-$titre = htmlspecialchars($fiche['bf_titre'], 
-            ENT_COMPAT, 
-            TEMPLATES_DEFAULT_CHARSET
-        );
+    foreach($fiches as $fiche): 
+     
+    $default_image = 'themes/enviescolaire/images/default_thumb_ressource.png';
+    
+    // Redimmension l'image et la met en cache si necessaire
+    if (isset($fiche['imagebf_image'])) {
+        if (!file_exists('cache/image_180_'.$fiche['imagebf_image'])) {
+            $image = redimensionner_image(
+                'files/'.$fiche['imagebf_image'], 
+                'cache/image_180_'.$fiche['imagebf_image'], 180, 180); 
+        } else {
+            $image = 'cache/image_180_'.$fiche['imagebf_image'];
+        }
+    } else {
+        $image = $default_image;
+    }
 
-$url = $fiche['url'];
+    $titre = htmlspecialchars(
+        $fiche['bf_titre'], 
+        ENT_COMPAT, 
+        TEMPLATES_DEFAULT_CHARSET
+    );
 
-$color = 'color_'.$fiche['listeListeCategories'];
-
+    $url = $fiche['url'];
+    
+    $color = 'color_'.$fiche['listeListeCategories'];
 ?>
 
 <a class="ressource <?php echo $color; ?>" href="<?php echo $url; ?>">
-	<div class='cadre_image_ressource'>
+    <div class='cadre_image_ressource'>
         <img src="<?php echo $image; ?>" />
     </div> <br />
-	<p class="name"><?php echo $titre; ?></p>
+    <p class="name"><?php echo $titre; ?></p>
 </a>
 <?php endforeach; ?>
 <div>
