@@ -22,8 +22,8 @@ body {
 	padding: 0;
 }
 
-header, aside, section { 
-	box-sizing: border-box; 
+header, aside, section {
+	box-sizing: border-box;
 }
 
 header p {
@@ -42,6 +42,10 @@ header, aside {
 	margin: 0;
 	min-width: 18em;
 	width: 18em;
+}
+
+.logo {
+    max-width: 100%;
 }
 
 footer {
@@ -213,7 +217,7 @@ ul.nuage {
  * aside project en première page
  ****************************************************************************/
 
-div.page_projects, .link_ressources, .link_newsletter, .link_search, 
+div.page_projects, .link_ressources, .link_newsletter, .link_search,
 .link_quesaco {
 	background: #ffb640;
 	box-sizing: border-box;
@@ -267,19 +271,24 @@ div.page_projects a {
 
 @media (max-width: 1024px) {
 
-	body { 
-		flex-flow: column wrap; 
+	body {
+		flex-flow: column wrap;
 		font-size: 175%;
 		line-height: normal;
 	}
+
+    header {
+        width: 100%;
+        text-align: center;
+    }
 
 	section, aside {
 		max-width: 100%;
 		width: 100%;
 	}
 
-	aside h1 { 
-		width: 100%; 
+	aside h1 {
+		width: 100%;
 		text-align: center;
 	}
 
