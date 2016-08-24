@@ -90,14 +90,13 @@ aside a { color: #ffb640; text-align: center;}
 	flex-grow: 0;
 	flex-shrink: 0;
 	height: 200px;
-	/*justify-content: center;*/
 	list-style-type: none;
-    margin: 10px;
+    margin: 20px;
     margin-left: 0px;
 	padding: 10px;
 	text-align: center;
 	text-decoration: none;
-	width: 130px;
+	width: 121px;
 }
 
 .ressource:hover {
