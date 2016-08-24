@@ -22,8 +22,7 @@ foreach ($fiches as $fiche) {
 
     $titre = htmlspecialchars(
         $fiche['bf_titre'],
-        ENT_COMPAT,
-        TEMPLATES_DEFAULT_CHARSET
+        ENT_COMPAT
     );
 
     $url = $fiche['url'];
