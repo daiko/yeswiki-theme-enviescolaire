@@ -75,15 +75,12 @@ aside a { color: #ffb640; text-align: center;}
  ****************************************************************************/
 
 .ressources {
-	/*align-items: flex-start;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;*/
     width: 100%;
 }
 
 .ressource {
 	background: #8cbb15;
+    color: white;
     float: left;
 	display: flex;
 	flex-direction: column;
@@ -101,6 +98,8 @@ aside a { color: #ffb640; text-align: center;}
 
 .ressource:hover {
 	animation: FirstAnimation 0.5s;
+    color: white;
+    text-decoration: none;
 	transform: scale(1.1);
 }
 
@@ -119,10 +118,6 @@ aside a { color: #ffb640; text-align: center;}
 .ressource img {
 	max-height: 180px;
 	max-width: 120px;
-}
-
-.ressources a {
-	color: white;
 }
 
 .color_1  { background: pink; }
