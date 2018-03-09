@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="{{configuration param="charset"}}">
-    <meta name="keywords" content="{{configuration param="meta_keywords"}}">
-    <meta name="description" content="{{configuration param="meta_description"}}">
-    <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
-    {{linkstyle}}
-    {{linkrss}}
+  <meta charset="{{configuration param="charset"}}">
+  <meta name="keywords" content="{{configuration param="meta_keywords"}}">
+  <meta name="description" content="{{configuration param="meta_description"}}">
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+  {{linkstyle}}
+  {{linkrss}}
 </head>
 
 <body {{parambody}}>
-    <section id="main default" role="main" {{doubleclic}}>
-        {WIKINI_PAGE}
-        <footer>
-            <a href='?wiki=MentionsLegales'>Mentions légales</a>
-        </footer>
-    </section>
+  <section id="main default" role="main" {{doubleclic}}>
+    {WIKINI_PAGE}
+    <footer>
+      <a href='?wiki=MentionsLegales'>Mentions légales</a>
+    </footer>
+  </section>
 
-    <header class="left">
-        <a href="wakka.php">
-            <h1>
-                <img
-                    class="logo" alt="Scolaire"
-                    src="themes/enviescolaire/images/header.png"
-                >
-            </h1>
-        </a>
-        <p>Le site des élèves acteurs de l'enseignement agricole</p>
-    </header>
+  <header class="left">
+    <a href="wakka.php">
+      <h1>
+        <img
+          class="logo" alt="Scolaire"
+          src="themes/enviescolaire/images/header.png"
+        >
+      </h1>
+    </a>
+    <p>Le site des élèves acteurs de l'enseignement agricole</p>
+  </header>
 
-    <aside class="project">
-        <a class="link_ressources" href="?wiki=ressources"><h2>Ressources</h2></a>
-        {{include page="ProjetS" class="page_projects" doubleclic="0"}}
-        <a class="link_newsletter" href="?wiki=newsletter"><h2>Newsletter</h2></a>
-        <a class="link_quesaco" href="?wiki=QueSaCo"><h2>Quésaco ?</h2></a>
-        <span class="link_search" >{{moteurrecherche class="mr_enviesco" template="moteurrecherche_basic.tpl.html"}}</span>
-    </aside>
+  <aside class="project">
+    <a class="link_ressources" href="?wiki=ressources"><h2>Ressources</h2></a>
+    {{include page="ProjetS" class="page_projects" doubleclic="0"}}
+    <a class="link_newsletter" href="?wiki=newsletter"><h2>Newsletter</h2></a>
+    <a class="link_quesaco" href="?wiki=QueSaCo"><h2>Quésaco ?</h2></a>
+    <span class="link_search" >{{moteurrecherche class="mr_enviesco" template="moteurrecherche_basic.tpl.html"}}</span>
+  </aside>
 
-    {{linkjavascript}}
+  {{linkjavascript}}
 </body>
